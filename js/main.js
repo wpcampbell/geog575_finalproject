@@ -147,6 +147,3 @@ var overlayMaps = {
 var glacierLayers = L.control.layers(null,overlayMaps).addTo(map);
 
 
-
-
-
