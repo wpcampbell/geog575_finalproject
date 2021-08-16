@@ -1,0 +1,32 @@
+/*Stylesheet by Will P. Campbell,2021*/
+body {
+    background-color: #ECECEC;
+}
+
+#mapid {
+        position: fixed;
+        height: 650px; 
+        width:60%;
+        border:5px solid black;
+        display: inline-block;
+    
+      }
+
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#panel {
+    position: fixed;
+    right:0;
+    border: 5px outset black;
+    background-color: lightblue;
+    text-align: center;
+    width: 25%;
+    height: auto;
+    padding: 20px;
+    display: inline-block;
+
+}
+
