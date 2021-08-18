@@ -4,10 +4,11 @@ body {
 }
 
 [data-map] {
-    height: 300px;
+    height: 650px;
+    width: 60%;
     border: 5px solid black;
-    
-  }
+    margin:20px
+}
 
 h1{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -15,7 +16,7 @@ h1{
 
 
 #panel {
-    position: fixed;
+    position: relative;
     right:0;
     border: 5px outset black;
     background-color: lightblue;

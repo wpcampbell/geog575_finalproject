@@ -32,7 +32,7 @@ var glacier_map_Data = {
             click: function(){
             $("#panel").html(Toe_11000.features[0].properties.Years_Ago  +" Years Ago" + info11000 + glacierInfo + selfPlug);
             }
-}),
+            }),   
       },
       
       glacier_2: {
@@ -127,6 +127,7 @@ var glacier_map_Data = {
             g24000 = L.geoJSON(Toe_24000, 
             {
             style:  {color:"#984ea3"}
+            
             }
 ),
             shape_listener:
@@ -185,30 +186,32 @@ var glacier_map_Data = {
                 $("#panel").html(Toe_31500.features[0].properties.Years_Ago +" Years Ago"+ info31500 + glacierInfo + selfPlug)
             }
             }),
-      },
+      }
 };
 
 
 var initMap = (EL) => {
-    var id = EL.dataset.map; // rerturns i.e: "glacier_1"
+    var id = EL.dataset.map; // returns i.e: "glacier_1"
     var data = glacier_map_Data[id];
     var map = L.map(EL).setView(data.center,data.zoom);
-    L.titleLayer(basemapTile,basemapOptions).addTo(map);
+    L.tileLayer(basemapTile,basemapOptions).addTo(map);
+    var overlayMaps = {
+        "31500 years ago": g31500,
+        "27500 years ago": g27500,
+        "24000 years ago": g24000,
+        "20500 years ago": g20500,
+        "17000 years ago": g17000,
+        "14600 years ago": g14600,
+        "11000 years ago": g11000
+      
+      };
+      
+      var glacierLayers = L.control.layers(null, overlayMaps).addTo(map);
 };
 
-var ELS_map = document.querySelectorAll("[glacier-data]");
-ELS_map.forEach(initMap)
+      var ELS_map = document.querySelectorAll("[data-map]");
+      ELS_map.forEach(initMap)
+     
 
-var overlayMaps = {
-    "31500 years ago": g31500,
-    "27500 years ago": g27500,
-    "24000 years ago": g24000,
-    "20500 years ago": g20500,
-    "17000 years ago": g17000,
-    "14600 years ago": g14600,
-    "11000 years ago": g11000
-  
-  };
-  
-  var glacierLayers = L.control.layers(null, overlayMaps).addTo(map);
+
 
