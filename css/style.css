@@ -3,14 +3,11 @@ body {
     background-color: #ECECEC;
 }
 
-#mapid {
-        position: fixed;
-        height: 650px; 
-        width:60%;
-        border:5px solid black;
-        display: inline-block;
+[data-map] {
+    height: 300px;
+    border: 5px solid black;
     
-      }
+  }
 
 h1{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

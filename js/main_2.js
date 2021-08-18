@@ -188,6 +188,18 @@ var glacier_map_Data = {
       },
 };
 
+var overlayMaps = {
+    "31500 years ago":g31500,
+    "27500 years ago":g27500,
+    "24000 years ago":g24000,
+    "20500 years ago":g20500,
+    "17000 years ago":g17000,
+    "14600 years ago":g14600,
+    "11000 years ago":g11000
+    
+    }; 
+    
+    var glacierLayers = L.control.layers(null,overlayMaps).addTo(map);
 
 var initMap = (EL) => {
     var id = EL.dataset.map; // rerturns i.e: "glacier_1"
@@ -198,17 +210,3 @@ var initMap = (EL) => {
 
 var ELS_map = document.querySelectorAll("[glacier-data]");
 ELS_map.forEach(initMap)
-
-var overlayMaps = {
-    "31500 years ago": g31500,
-    "27500 years ago": g27500,
-    "24000 years ago": g24000,
-    "20500 years ago": g20500,
-    "17000 years ago": g17000,
-    "14600 years ago": g14600,
-    "11000 years ago": g11000
-  
-  };
-  
-  var glacierLayers = L.control.layers(null, overlayMaps).addTo(map);
-
