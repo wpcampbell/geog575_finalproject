@@ -1,30 +1,28 @@
 /*Stylesheet by Will P. Campbell,2021*/
 body {
-    background-color: #ECECEC;
+  background-color: #ececec;
 }
 
+/* idea from Roko C Buljian answer on StackOverflow: https://stackoverflow.com/q/68836662/16538252 */
 [data-map] {
-    height: 650px;
-    width: 60%;
-    border: 5px solid black;
-    margin:20px
+  height: 650px;
+  width: 60%;
+  border: 5px solid black;
+  margin: 20px;
 }
 
-h1{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
 
 #panel {
-    position: relative;
-    right:0;
-    border: 5px outset black;
-    background-color: lightblue;
-    text-align: center;
-    width: 25%;
-    height: auto;
-    padding: 20px;
-    display: inline-block;
-
+  position: relative;
+  right: 0;
+  border: 5px outset black;
+  background-color: lightblue;
+  text-align: center;
+  width: 25%;
+  height: auto;
+  padding: 20px;
+  display: inline-block;
 }
-
