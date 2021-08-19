@@ -212,6 +212,3 @@ var initMap = (EL) => {
       var ELS_map = document.querySelectorAll("[data-map]");
       ELS_map.forEach(initMap)
      
-
-
-
