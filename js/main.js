@@ -1066,18 +1066,16 @@ var initMap = (EL) => {
   var data = glacier_map_Data[id];
   var map = L.map(EL).setView(data.center, data.zoom);
   L.tileLayer(basemapTile, basemapOptions).addTo(map);
-  var overlayMaps = {
+  
+  var glacierLayers = L.control.layers(null, { //formatting from iH8 answer on StackOverflow https://stackoverflow.com/a/46044847/16538252
     "31500 years ago": g31500,
     "27500 years ago": g27500,
     "24000 years ago": g24000,
     "20500 years ago": g20500,
     "17000 years ago": g17000,
     "14600 years ago": g14600,
-    "11000 years ago": g11000,
-  };
-
-  var glacierLayers = L.control.layers(null, overlayMaps).addTo(map);
+    "11000 years ago": g11000
+  }).addTo(map);
 };
-
 var ELS_map = document.querySelectorAll("[data-map]");
 ELS_map.forEach(initMap);
