@@ -1066,16 +1066,38 @@ var initMap = (EL) => {
   var data = glacier_map_Data[id];
   var map = L.map(EL).setView(data.center, data.zoom);
   L.tileLayer(basemapTile, basemapOptions).addTo(map);
-  
-  var glacierLayers = L.control.layers(null, { //formatting from iH8 answer on StackOverflow https://stackoverflow.com/a/46044847/16538252
-    "31500 years ago": g31500,
-    "27500 years ago": g27500,
-    "24000 years ago": g24000,
-    "20500 years ago": g20500,
-    "17000 years ago": g17000,
-    "14600 years ago": g14600,
-    "11000 years ago": g11000
-  }).addTo(map);
+
+  var glacierLayers = L.control
+    .layers(null, {
+      //formatting from iH8 answer on StackOverflow https://stackoverflow.com/a/46044847/16538252
+      "31500 years ago": g31500,
+      "27500 years ago": g27500,
+      "24000 years ago": g24000,
+      "20500 years ago": g20500,
+      "17000 years ago": g17000,
+      "14600 years ago": g14600,
+      "11000 years ago": g11000,
+    })
+    .addTo(map);
 };
 var ELS_map = document.querySelectorAll("[data-map]");
 ELS_map.forEach(initMap);
+
+
+// //slider to move from one div to the other
+// function CreateSequenceControls() {
+//   //create range input element (slider)
+//   $("#div-slider").append('<input class="range-slider" type="range">');
+//   //slider attributes
+//   $(".range-slider").attr({
+//     max: 6, //index for 7th map is [6]
+//     min: 0, //index for 1st map is [0]
+//     value: 0, //slider starts at index [0]
+//     step: 1, //slider will move one at a time
+//   });
+// };
+
+// CreateSequenceControls();
+
+
+
