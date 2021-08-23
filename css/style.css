@@ -16,15 +16,15 @@ h1 {
 }
 
 #panel {
-  position: relative;
+  position: fixed;
   right: 0;
+  top: 0;
   border: 5px outset black;
   background-color: lightblue;
   text-align: center;
   width: 25%;
   height: auto;
   padding: 20px;
-  display: inline-block;
 }
 
 #div-slider {
